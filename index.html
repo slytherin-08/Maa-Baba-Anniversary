@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07060c" />
+  <title>Happy 24th Anniversary, Mom &amp; Dad ♡</title>
+  <meta name="description" content="A little anniversary gift for Mom and Dad, from Bivor &amp; Bornil." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-mood="midnight">
+
+  <!-- ============================================================
+       SHARED SVG DEFINITIONS (gradients, clip paths, ornaments)
+       Kept at 0×0 instead of display:none so gradients still work.
+       ============================================================ -->
+  <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Gold -->
+      <linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f7e3a3" />
+        <stop offset=".35" stop-color="#d4af37" />
+        <stop offset=".65" stop-color="#a8802a" />
+        <stop offset="1" stop-color="#f3d98b" />
+      </linearGradient>
+      <linearGradient id="g-gold-h" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#9c7424" />
+        <stop offset=".3" stop-color="#e9c96a" />
+        <stop offset=".5" stop-color="#fff0bd" />
+        <stop offset=".7" stop-color="#d4af37" />
+        <stop offset="1" stop-color="#8a651d" />
+      </linearGradient>
+
+      <!-- Cake bodies (horizontal shading = cylinder look) -->
+      <linearGradient id="g-blush-body" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#b9737d" />
+        <stop offset=".22" stop-color="#eebfc4" />
+        <stop offset=".5" stop-color="#f9dfe0" />
+        <stop offset=".8" stop-color="#e6aab1" />
+        <stop offset="1" stop-color="#a9636e" />
+      </linearGradient>
+      <linearGradient id="g-ivory-body" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#d4c3a6" />
+        <stop offset=".25" stop-color="#f7eedd" />
+        <stop offset=".5" stop-color="#fffaf1" />
+        <stop offset=".8" stop-color="#efe2ca" />
+        <stop offset="1" stop-color="#c7b393" />
+      </linearGradient>
+      <radialGradient id="g-ivory-top" cx=".45" cy=".35" r=".75">
+        <stop offset="0" stop-color="#fffdf8" />
+        <stop offset="1" stop-color="#f1e5d0" />
+      </radialGradient>
+      <linearGradient id="g-ganache" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#8e2540" />
+        <stop offset="1" stop-color="#5e1427" />
+      </linearGradient>
+      <radialGradient id="g-ganache-top" cx=".42" cy=".3" r=".8">
+        <stop offset="0" stop-color="#a8344f" />
+        <stop offset="1" stop-color="#6a1830" />
+      </radialGradient>
+      <radialGradient id="g-pearl" cx=".35" cy=".3" r=".8">
+        <stop offset="0" stop-color="#ffffff" />
+        <stop offset="1" stop-color="#d9c9a5" />
+      </radialGradient>
+      <radialGradient id="g-rose-deep" cx=".4" cy=".35" r=".75">
+        <stop offset="0" stop-color="#d4566e" />
+        <stop offset="1" stop-color="#8c1f37" />
+      </radialGradient>
+      <radialGradient id="g-rose-blush" cx=".4" cy=".35" r=".75">
+        <stop offset="0" stop-color="#fbe0e3" />
+        <stop offset="1" stop-color="#d9909b" />
+      </radialGradient>
+      <linearGradient id="g-leaf" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#8aa476" />
+        <stop offset="1" stop-color="#4c6640" />
+      </linearGradient>
+
+      <!-- Knife & hands -->
+      <linearGradient id="g-blade" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#7f878f" />
+        <stop offset=".45" stop-color="#f4f6f8" />
+        <stop offset=".6" stop-color="#d5dade" />
+        <stop offset="1" stop-color="#9aa1a8" />
+      </linearGradient>
+      <linearGradient id="g-handle" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#e2d4b8" />
+        <stop offset=".5" stop-color="#fffaf0" />
+        <stop offset="1" stop-color="#d8c7a6" />
+      </linearGradient>
+      <linearGradient id="g-ribbon" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f8d3d8" />
+        <stop offset="1" stop-color="#d9909b" />
+      </linearGradient>
+      <linearGradient id="g-skin-m" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#d29a72" />
+        <stop offset="1" stop-color="#ad7149" />
+      </linearGradient>
+      <linearGradient id="g-skin-f" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ebc19f" />
+        <stop offset="1" stop-color="#cf9873" />
+      </linearGradient>
+      <!-- Sleeves fade into the darkness, so the arms seem to arrive from off-stage -->
+      <linearGradient id="g-sleeve-m" gradientUnits="userSpaceOnUse" x1="-170" y1="0" x2="70" y2="0">
+        <stop offset="0" stop-color="#1b2540" stop-opacity="0" />
+        <stop offset=".55" stop-color="#22305a" stop-opacity=".85" />
+        <stop offset="1" stop-color="#2b3c6c" />
+      </linearGradient>
+      <linearGradient id="g-sleeve-f" gradientUnits="userSpaceOnUse" x1="560" y1="0" x2="300" y2="0">
+        <stop offset="0" stop-color="#5e1427" stop-opacity="0" />
+        <stop offset=".55" stop-color="#7d1d35" stop-opacity=".85" />
+        <stop offset="1" stop-color="#9b2c46" />
+      </linearGradient>
+
+      <!-- The knife blade disappears below this line (the cake's top surface) -->
+      <clipPath id="clip-blade" clipPathUnits="userSpaceOnUse">
+        <rect x="-1000" y="-1000" width="2400" height="1178" />
+      </clipPath>
+
+      <!-- Floral corner ornament (reused on the letter and the photo frame) -->
+      <symbol id="floral-corner" viewBox="0 0 120 120">
+        <path d="M6 116 C 10 74, 30 42, 68 24 S 108 8, 116 5" fill="none" stroke="url(#g-gold)" stroke-width="1.4" stroke-linecap="round" />
+        <path d="M18 84 C 24 70, 34 60, 46 52" fill="none" stroke="url(#g-gold)" stroke-width=".9" stroke-linecap="round" />
+        <path d="M24 74 q -15 -3 -19 -17 q 15 1 19 17z" fill="url(#g-leaf)" opacity=".85" />
+        <path d="M34 58 q -3 -15 9 -24 q 3 14 -9 24z" fill="url(#g-leaf)" opacity=".85" />
+        <path d="M86 16 q 6 -12 20 -12 q -6 12 -20 12z" fill="url(#g-leaf)" opacity=".85" />
+        <path d="M44 50 q 12 -2 18 6 q -12 4 -18 -6z" fill="url(#g-leaf)" opacity=".8" />
+        <circle cx="66" cy="26" r="10" fill="url(#g-rose-deep)" />
+        <path d="M58 28 A 8 8 0 0 1 72 21 M 73 28 A 7 7 0 0 1 62 33 M 63 25 A 3.5 3.5 0 1 1 68 29" fill="none" stroke="#5e1427" stroke-width="1.2" opacity=".6" />
+        <circle cx="104" cy="12" r="5" fill="url(#g-rose-blush)" />
+        <circle cx="12" cy="104" r="4" fill="url(#g-rose-blush)" />
+        <circle cx="50" cy="40" r="1.8" fill="#f6e3a1" />
+        <circle cx="90" cy="26" r="1.5" fill="#f6e3a1" />
+        <circle cx="28" cy="92" r="1.5" fill="#f6e3a1" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============================================================
+       ATMOSPHERE LAYERS (background moods, bokeh, dimmer, particles)
+       ============================================================ -->
+  <div class="atmosphere" aria-hidden="true">
+    <div class="backdrop bd-midnight"></div>
+    <div class="backdrop bd-burgundy"></div>
+    <div class="backdrop bd-candle"></div>
+    <div class="backdrop bd-velvet"></div>
+    <div class="backdrop bd-gold"></div>
+    <div class="bokeh">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="vignette"></div>
+    <div class="flash" id="flash"></div>
+    <div class="dimmer" id="dimmer"></div>
+  </div>
+  <canvas id="fx-canvas" class="fx-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       MUSIC CONTROL (one shared <audio> element for the whole site)
+       ============================================================ -->
+  <audio id="bg-music" preload="auto" loop></audio>
+
+  <div class="music-control" id="music-control" data-state="idle">
+    <button class="music-btn" id="music-toggle" type="button" aria-pressed="false" aria-label="Play background music">
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <svg class="music-muted-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M9 18V6l10-2v12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="6.5" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+        <circle cx="16.5" cy="16" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+        <path d="M3 3l18 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+      </svg>
+    </button>
+    <label class="music-volume">
+      <span class="sr-only">Music volume</span>
+      <input type="range" id="music-volume" min="0" max="100" step="1" value="45" />
+    </label>
+    <p class="music-hint" id="music-hint" role="status"></p>
+  </div>
+
+  <main id="experience">
+
+    <!-- ==========================================================
+         SCENE 1 — THE MIDNIGHT COUNTDOWN
+         ========================================================== -->
+    <section class="scene scene-countdown" id="scene-countdown" aria-labelledby="cd-title">
+      <div class="scene-inner">
+        <p class="eyebrow rise" style="--d:.2s">Mom &amp; Dad · 24 Years Together</p>
+        <h1 class="cd-title rise" id="cd-title" tabindex="-1" style="--d:.5s">
+          Every beautiful love story deserves to be celebrated<span class="ellipsis">…</span>
+        </h1>
+        <p class="cd-sub rise" style="--d:.9s">Twenty-four years ago, two hearts made a promise. At midnight, we celebrate it.</p>
+
+        <div class="countdown rise" id="countdown" style="--d:1.2s" role="timer" aria-label="Time remaining until the anniversary">
+          <div class="cd-unit"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Days</span></div>
+          <span class="cd-sep" aria-hidden="true"></span>
+          <div class="cd-unit"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Hours</span></div>
+          <span class="cd-sep" aria-hidden="true"></span>
+          <div class="cd-unit"><span class="cd-num" id="cd-minutes">00</span><span class="cd-label">Minutes</span></div>
+          <span class="cd-sep" aria-hidden="true"></span>
+          <div class="cd-unit"><span class="cd-num" id="cd-seconds">00</span><span class="cd-label">Seconds</span></div>
+        </div>
+        <p class="cd-target rise" id="cd-target" style="--d:1.5s">until 10 October 2026 · 12:00 midnight (Dhaka)</p>
+
+        <div class="cd-complete" id="cd-complete" aria-live="polite">
+          <p class="cd-moment reveal-later" id="cd-moment">The moment we've been waiting for is here.</p>
+          <button class="btn-continue reveal-later" id="btn-continue" type="button" aria-label="Press to continue">
+            <span>Press to Continue</span><span class="heart" aria-hidden="true">♡</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SCENE 2 — THE ANNIVERSARY REVEAL
+         ========================================================== -->
+    <section class="scene scene-reveal" id="scene-reveal" aria-labelledby="reveal-title">
+      <div class="scene-inner">
+        <svg class="medallion rise" style="--d:.2s" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <g id="laurel"></g>
+          <circle class="ring ring-outer" cx="100" cy="100" r="74" fill="none" stroke="url(#g-gold)" stroke-width="1.6" />
+          <circle class="ring ring-inner" cx="100" cy="100" r="67" fill="none" stroke="url(#g-gold)" stroke-width=".7" />
+          <text x="100" y="114" text-anchor="middle" class="medallion-num">24</text>
+          <text x="100" y="140" text-anchor="middle" class="medallion-label">YEARS</text>
+          <path d="M100 54 c -3 -5 -10 -4 -10 2 c 0 5 10 10 10 10 c 0 0 10 -5 10 -10 c 0 -6 -7 -7 -10 -2z" fill="url(#g-gold)" />
+        </svg>
+
+        <h1 class="reveal-title" id="reveal-title" tabindex="-1">
+          <span class="reveal-line1">Happy Anniversary,</span>
+          <span class="reveal-line2">Mom &amp; Dad!</span>
+        </h1>
+        <p class="reveal-sub rise" style="--d:2.6s">Celebrating the love that built our home and made our world beautiful.</p>
+        <p class="reveal-dates rise" style="--d:3.1s">10 · 10 · 2002 <span aria-hidden="true">—</span> 10 · 10 · 2026</p>
+
+        <button class="btn-gold reveal-later" id="btn-to-letter" type="button">
+          Read Our Letter <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SCENE 3 — A LETTER FROM YOUR CHILDREN
+         ========================================================== -->
+    <section class="scene scene-letter" id="scene-letter" aria-labelledby="letter-heading">
+      <div class="scene-inner">
+        <h2 class="eyebrow rise" id="letter-heading" tabindex="-1" style="--d:.2s">A Letter From Your Children</h2>
+
+        <div class="letter-wrap rise" style="--d:.5s">
+          <!-- Decorative candles beside the letter (wide screens only) -->
+          <div class="deco-candle deco-left" aria-hidden="true"><span class="flame"></span><span class="deco-glow"></span></div>
+          <div class="deco-candle deco-right" aria-hidden="true"><span class="flame"></span><span class="deco-glow"></span></div>
+
+          <article class="letter-card">
+            <svg class="corner c-tl" aria-hidden="true" focusable="false"><use href="#floral-corner" /></svg>
+            <svg class="corner c-tr" aria-hidden="true" focusable="false"><use href="#floral-corner" /></svg>
+            <svg class="corner c-bl" aria-hidden="true" focusable="false"><use href="#floral-corner" /></svg>
+            <svg class="corner c-br" aria-hidden="true" focusable="false"><use href="#floral-corner" /></svg>
+
+            <div class="letter-scroll" id="letter-scroll" tabindex="0" aria-label="The letter">
+              <p class="letter-p letter-greeting">To the two people who gave us our world,</p>
+              <p class="letter-p">Before we understood what love meant, we were already surrounded by yours.</p>
+              <p class="letter-p">Before we knew what sacrifice looked like, you were already making sacrifices for us. Before we understood how difficult life could be, you were doing your best to make ours a little easier.</p>
+              <p class="letter-p">We may never fully understand every silent sacrifice, every worry you kept to yourselves, or every dream you set aside so that we could have a better future. But as we grow older, we understand more and more how precious your love truly is.</p>
+              <p class="letter-p">Mom and Dad, thank you for giving us life, for giving us a home, and for teaching us, through your own journey, that love is not simply a feeling. It is patience, forgiveness, commitment, kindness, and choosing one another even when life is difficult.</p>
+              <p class="letter-p">Your twenty-four years together are so much more than a number. They are the foundation of our family, the warmth of our home, and one of the greatest blessings of our lives.</p>
+              <p class="letter-p">On this special day, we wish we could give you something as beautiful as everything you have given us. Perhaps these little moments cannot repay your love, but we hope they remind you of how deeply you are loved and appreciated.</p>
+              <p class="letter-p">May the years ahead bring you more reasons to smile together, more memories to treasure, more strength through every challenge, and more peaceful mornings beside one another.</p>
+              <p class="letter-p">Thank you for bringing us into this world. Thank you for being our parents. And thank you for showing us that a beautiful life becomes even more beautiful when it is shared with someone you love.</p>
+              <p class="letter-p letter-wish">Happy 24th Anniversary, Mom and Dad.</p>
+              <p class="letter-p letter-sign">
+                <span class="sign-pre">With all the love in our hearts,</span>
+                <span class="sign-name">Bivor &amp; Bornil <span aria-hidden="true">♡</span></span>
+              </p>
+              <div class="letter-p wax-seal" aria-hidden="true"><span>B&amp;B</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="letter-actions stack">
+          <button class="btn-quiet" id="btn-letter-skip" type="button">Show the whole letter</button>
+          <button class="btn-gold reveal-later" id="btn-to-gallery" type="button">
+            Our Little Gallery Awaits <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SCENE 4 — SIX PHOTOGRAPHS, SIX MOMENTS OF LOVE
+         ========================================================== -->
+    <section class="scene scene-gallery" id="scene-gallery" aria-labelledby="gallery-heading">
+      <div class="gallery-backdrop" id="gallery-backdrop" aria-hidden="true"></div>
+      <div class="scene-inner">
+        <header class="gallery-head rise" style="--d:.2s">
+          <p class="eyebrow">Six Photographs · Six Moments of Love</p>
+          <h2 class="gallery-title" id="gallery-heading" tabindex="-1">Our Little Gallery</h2>
+          <p class="gallery-progress" id="gallery-progress" aria-live="polite">Memory 1 of 6</p>
+          <div class="gallery-dots" id="gallery-dots" aria-hidden="true"></div>
+        </header>
+
+        <div class="gallery-layout rise" id="gallery-layout" style="--d:.5s">
+          <figure class="photo-frame" id="photo-frame">
+            <span class="fc fc-tl" aria-hidden="true"></span><span class="fc fc-tr" aria-hidden="true"></span>
+            <span class="fc fc-bl" aria-hidden="true"></span><span class="fc fc-br" aria-hidden="true"></span>
+            <div class="photo-box">
+              <img id="gallery-img" alt="" decoding="async" />
+              <div class="photo-fallback" id="photo-fallback" hidden>
+                <span class="fallback-heart" aria-hidden="true">♡</span>
+                <span>This photograph could not be loaded.</span>
+              </div>
+            </div>
+          </figure>
+
+          <div class="gallery-text" id="gallery-text">
+            <p class="photo-theme" id="gallery-theme"></p>
+            <p class="photo-caption" id="gallery-caption"></p>
+            <blockquote class="photo-quote" id="gallery-quote">
+              <p id="gallery-quote-text"></p>
+              <footer id="gallery-quote-author"></footer>
+            </blockquote>
+            <nav class="gallery-nav" aria-label="Gallery navigation">
+              <button class="btn-quiet" id="gallery-prev" type="button"><span aria-hidden="true">←</span> Previous</button>
+              <button class="btn-gold btn-small" id="gallery-next" type="button">Next Memory <span aria-hidden="true">→</span></button>
+            </nav>
+          </div>
+        </div>
+
+        <div class="gallery-epilogue" id="gallery-epilogue" hidden>
+          <p class="epilogue-text" id="epilogue-text" tabindex="-1">And this beautiful story is still being written<span class="ellipsis">…</span></p>
+          <button class="btn-gold reveal-later" id="btn-to-cake" type="button">
+            Let's Celebrate <span aria-hidden="true">→</span>
+          </button>
+          <button class="btn-quiet epilogue-back reveal-later" id="epilogue-back" type="button">
+            <span aria-hidden="true">←</span> Back to the memories
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SCENES 5, 6 & 7 — THE CAKE (intro → candles → cutting)
+         One section with three stages, so the cake itself never
+         flickers between scenes; only the words and interactions change.
+         ========================================================== -->
+    <section class="scene scene-cake" id="scene-cake" data-stage="intro" aria-labelledby="cake-heading-intro">
+      <div class="cake-candlelight" aria-hidden="true"></div>
+      <div class="scene-inner">
+
+        <div class="stack cake-text">
+          <div class="stage-panel" data-show="intro">
+            <h2 class="cake-heading" id="cake-heading-intro" tabindex="-1">Here we are, to celebrate your very special day!</h2>
+            <p class="cake-sub">A little cake, a little celebration, and a whole lot of love.</p>
+          </div>
+          <div class="stage-panel" data-show="candles">
+            <h2 class="cake-heading" id="cake-heading-candles" tabindex="-1">Make a wish, Mom and Dad<span class="ellipsis">…</span> <span class="heart" aria-hidden="true">♡</span></h2>
+            <p class="cake-sub cake-instruction">Tap each candle to blow it out!</p>
+          </div>
+          <div class="stage-panel" data-show="cutting">
+            <h2 class="cake-heading" id="cake-heading-cutting" tabindex="-1">Some things are even sweeter when shared.</h2>
+            <p class="cake-sub">Mom and Dad, shall we cut the cake together?</p>
+          </div>
+        </div>
+
+        <div class="cake-stage" id="cake-stage">
+          <div class="cake-glow" aria-hidden="true"></div>
+          <div class="cake-body" id="cake-body" role="img" aria-label="A two-tier anniversary cake with ivory and blush frosting, deep-rose roses, pearls, and a golden Happy Anniversary topper">
+            <svg class="cake-layer cake-stand" id="cake-stand" viewBox="0 0 400 412" aria-hidden="true" focusable="false"></svg>
+            <svg class="cake-layer cake-interior" id="cake-interior" viewBox="0 0 400 412" aria-hidden="true" focusable="false"></svg>
+            <svg class="cake-layer cake-half half-left" id="cake-half-left" viewBox="0 0 400 412" aria-hidden="true" focusable="false"></svg>
+            <svg class="cake-layer cake-half half-right" id="cake-half-right" viewBox="0 0 400 412" aria-hidden="true" focusable="false"></svg>
+            <svg class="cake-layer cake-topper" id="cake-topper" viewBox="0 0 400 412" aria-hidden="true" focusable="false"></svg>
+          </div>
+          <div class="candles" id="candles" role="group" aria-label="Candles on the cake"></div>
+          <svg class="cake-layer knife-rig" id="knife-rig" viewBox="0 0 400 412" aria-hidden="true" focusable="false"></svg>
+        </div>
+
+        <div class="stack cake-controls">
+          <div class="stage-panel" data-show="intro">
+            <button class="btn-gold" id="btn-make-wish" type="button">Make a Wish <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="stage-panel" data-show="candles" id="panel-candles">
+            <div class="stack">
+              <div class="sub sub-a">
+                <p class="candle-status" id="candle-status" aria-live="polite">6 candles are still glowing</p>
+                <div class="candle-dots" id="candle-dots" aria-hidden="true"></div>
+              </div>
+              <div class="sub sub-b">
+                <p class="cake-message reveal-later" id="wish-message" aria-live="polite">May all your beautiful wishes come true.</p>
+                <button class="btn-gold reveal-later" id="btn-to-cutting" type="button">Time to Cut the Cake <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="stage-panel" data-show="cutting" id="panel-cutting">
+            <div class="stack">
+              <div class="sub sub-a">
+                <button class="btn-continue btn-cut reveal-later" id="btn-cut" type="button" aria-label="Cut the cake">
+                  <span>Cut the Cake</span><span class="heart" aria-hidden="true">♡</span>
+                </button>
+                <p class="cut-hint reveal-later" id="cut-hint">or simply tap the cake</p>
+              </div>
+              <div class="sub sub-b">
+                <p class="cake-message reveal-later" id="cut-message" aria-live="polite">Together is a beautiful place to be.</p>
+                <button class="btn-gold reveal-later" id="btn-to-finale" type="button">Continue the Celebration <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SCENE 8 — THE CELEBRATION & BLESSING  (+ THE END)
+         ========================================================== -->
+    <section class="scene scene-finale" id="scene-finale" aria-labelledby="finale-title">
+      <div class="scene-inner">
+        <p class="eyebrow rise" style="--d:.3s">24 Years · Hand in Hand</p>
+        <h2 class="finale-title rise" id="finale-title" tabindex="-1" style="--d:.6s">Happy Anniversary, Mom &amp; Dad!</h2>
+        <div class="finale-divider rise" style="--d:1.1s" aria-hidden="true"><span></span><i>♡</i><span></span></div>
+
+        <div class="blessing" id="blessing">
+          <p class="bless-line">May your love continue to deepen with every passing year.</p>
+          <p class="bless-line">May your home always be filled with laughter, your hearts with patience, and your lives with peace and happiness.</p>
+          <p class="bless-line">May you continue to find comfort in each other's presence, strength in each other's support, and joy in the beautiful little moments you share.</p>
+          <p class="bless-line">May the years ahead bring you good health, countless blessings, beautiful memories, and many more anniversaries to celebrate hand in hand.</p>
+          <p class="bless-line">No matter how much time passes, may you always find a reason to smile at one another and remember why your journey began.</p>
+          <p class="bless-line bless-strong">Thank you for being the heart of our family.</p>
+          <p class="bless-line bless-strong">You are loved more than words can ever express.</p>
+          <p class="bless-line">Happy Anniversary, Mom and Dad.</p>
+          <p class="bless-line">Forever grateful to be your children. <span aria-hidden="true">♡</span></p>
+          <p class="bless-line bless-closing">With all our love, today and always.</p>
+          <p class="bless-line bless-signature">Bivor &amp; Bornil</p>
+        </div>
+
+        <footer class="the-end" id="the-end">
+          <p class="end-title">The End</p>
+          <p class="end-sub">But your love story goes on<span class="ellipsis">…</span> <span aria-hidden="true">♡</span></p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <noscript>
+    <div class="noscript">This anniversary gift needs JavaScript to play. Please enable it and reload the page. ♡</div>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>

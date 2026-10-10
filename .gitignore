@@ -1,0 +1,8 @@
+# Originals (the site uses the copies in assets/)
+/*.jpg
+/*.mp3
+
+# Editor / OS clutter
+.vscode/
+Thumbs.db
+Desktop.ini

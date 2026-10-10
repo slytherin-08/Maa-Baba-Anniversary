@@ -1,5 +1,5 @@
 /* =====================================================================
-   HAPPY 24TH ANNIVERSARY, MOM & DAD — script.js
+   HAPPY 24TH ANNIVERSARY, BABA MAA — script.js
    A gift from Bivor & Bornil.
 
    ASSET LOCATIONS
@@ -40,7 +40,7 @@
     photos: [
       {
         src: 'assets/photos/photo-1.jpg',
-        alt: 'Dad and Mom standing together beside an ornate iron gate on a sunny hillside, with bare trees and misty mountains behind them.',
+        alt: 'Baba Maa standing together beside an ornate iron gate on a sunny hillside, with bare trees and misty mountains behind them.',
         theme: 'The Beginning of a Beautiful Journey',
         caption: 'Up in the hills, side by side — the same quiet promise you made twenty-four years ago, still standing strong.',
         quote: 'The bravest thing two hearts can do is begin — and then keep beginning, again and again, together.',
@@ -48,7 +48,7 @@
       },
       {
         src: 'assets/photos/photo-2.jpg',
-        alt: 'Dad and Mom standing by a desert road in front of a towering rocky mountain.',
+        alt: 'Baba Maa standing by a desert road in front of a towering rocky mountain.',
         theme: 'Love That Grows Stronger With Time',
         caption: 'Like the ancient mountain behind you — steady, patient, and only more beautiful with every passing year.',
         quote: 'A successful marriage requires falling in love many times, always with the same person.',
@@ -57,7 +57,7 @@
       },
       {
         src: 'assets/photos/photo-3.jpg',
-        alt: 'Dad and Mom standing back to back beside the water, with tall city skyscrapers rising behind them.',
+        alt: 'Baba Maa standing back to back beside the water, with tall city skyscrapers rising behind them.',
         theme: 'Standing Beside One Another',
         caption: 'Back to back, side by side — each other’s strongest support, wherever in the world you are.',
         quote: 'Love does not consist in gazing at each other, but in looking outward together in the same direction.',
@@ -66,7 +66,7 @@
       },
       {
         src: 'assets/photos/photo-4.jpg',
-        alt: 'A close, smiling selfie of Dad and Mom with their heads resting together.',
+        alt: 'A close, smiling selfie of Baba Maa with their heads resting together.',
         theme: 'Happiness in Ordinary Moments',
         caption: 'No grand occasion, no special reason — just the two of you, smiling. These are the moments that make a life.',
         quote: 'Some of the most beautiful love stories are written quietly, one ordinary day at a time.',
@@ -74,7 +74,7 @@
       },
       {
         src: 'assets/photos/photo-5.jpg',
-        alt: 'Mom and Dad standing arm in arm in a tall pine forest beside a huge fallen tree trunk.',
+        alt: 'Baba Maa standing arm in arm in a tall pine forest beside a huge fallen tree trunk.',
         theme: 'Growing Older Together',
         caption: 'Among the tall pines, still walking arm in arm — proof that the best journeys are the ones you take together.',
         quote: 'Grow old along with me! The best is yet to be.',
@@ -83,7 +83,7 @@
       },
       {
         src: 'assets/photos/photo-6.jpg',
-        alt: 'Dad and Mom side by side in the bright desert sun, a rugged mountain rising behind them.',
+        alt: 'Baba Maa side by side in the bright desert sun, a rugged mountain rising behind them.',
         theme: 'A Family Built on Love',
         caption: 'Twenty-four years of patience, laughter, and togetherness — the home we were so lucky to grow up in.',
         quote: 'Home is not merely a place. Sometimes, it is two people who make life feel safe.',
@@ -732,7 +732,7 @@
       FX.confetti({ x: W * 0.08, y: H * 0.95, dir: -Math.PI / 2 + 0.45, spread: 0.6, count: 80 });
       FX.confetti({ x: W * 0.92, y: H * 0.95, dir: -Math.PI / 2 - 0.45, spread: 0.6, count: 80 });
       await wait(pace(900));
-      // …then sparkles around the title as "Mom & Dad!" blooms in
+      // …then sparkles around the title as "Baba Maa!" blooms in
       const title = $('#reveal-title');
       const c = centerOf(title);
       FX.sparkles({ x: c.x, y: c.y, count: 34, radius: Math.max(140, c.w * 0.55) });
@@ -1180,7 +1180,7 @@
           <path d="M200 102 C212 89 226 97 216 107 C211 111 205 107 200 102 Z" fill="url(#g-ribbon)"/>
           <circle cx="200" cy="103" r="3.6" fill="#e7a0a8" stroke="#c97b87" stroke-width=".6"/>
         </g>`;
-      // Dad's hand — from the left: navy suit sleeve, shirt cuff, cufflink, wedding ring
+      // Baba's hand — from the left: navy suit sleeve, shirt cuff, cufflink, wedding ring
       let left = `<g class="hand-left">
           <path d="M-260 46 L116 46 Q124 46 124 54 L124 92 Q124 100 116 100 L-260 100 Z" fill="url(#g-sleeve-m)"/>
           <path d="M-60 60 Q30 56 112 58" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="3"/>
@@ -1193,7 +1193,7 @@
       }
       left += '<rect x="186" y="81.3" width="3.6" height="9.4" fill="url(#g-gold-h)"/></g>';
 
-      // Mom's hand — from the right: burgundy sleeve with gold border, bangles, painted nails, ring
+      // Maa's hand — from the right: burgundy sleeve with gold border, bangles, painted nails, ring
       let right = `<g class="hand-right">
           <path d="M276 10 L660 10 L660 56 L276 56 Q266 56 266 46 L266 20 Q266 10 276 10 Z" fill="url(#g-sleeve-f)"/>
           <rect x="264" y="10" width="8" height="46" rx="2" fill="url(#g-gold-h)"/>`;
